@@ -15,13 +15,16 @@ Christopher Acosta
 
 [Backend Repo](https://github.com/StepheeGee/can-of-books-backend.git) 
 
-[Deployed Site]() 
+[Deployed Site](https://fascinating-sunburst-0880d4.netlify.app/) 
 
 ## Lighthouse
 
-[12.11.23]()
+[12.11.23](./lighthouse.png)
+
 [12.12.23]()
+
 [12.13.23]()
+
 [12.14.23]()
 
 
