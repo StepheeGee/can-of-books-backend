@@ -48,13 +48,14 @@ app.post('/books', async (request, response, next) => {
 app.delete('/books/:bookID', async (request, response, next) => {
   try {
     let id = request.params.bookID;
-    console.log('Deleting', bookID);
-    let deletedBook = await Book.findByIdAndDelete({_id:id});
-    response.status(200).send('Book was deleted');
+    console.log('Deleting', id);
+    let deletedBook = await Book.findByIdAndDelete(id);
+    response.status(200).json({ message: 'Book was deleted' }); 
   } catch (error) {
     next(error);
   }
 });
+
 
 app.put('/books/:bookID', async (request, response, next) => {
   try {
