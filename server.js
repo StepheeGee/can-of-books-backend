@@ -18,8 +18,8 @@ db.once('open', function () {
   console.log('Mongoose is connected');
 });
 
-app.get('/test', (request, response) => {
-  response.status(200).send('Welcome to Our Server!');
+app.get('/', (request, response) => {
+  response.status(200).send('Home Page');
 });
 
 app.get('/books', async (request, response, next) => {
