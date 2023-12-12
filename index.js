@@ -1,18 +1,16 @@
 require('dotenv').config();
-const server = require('./server.js');
-const mongoose = require('mongoose'); // Code that communicates with the database
+const mongoose = require('mongoose');
 const seed = require('./seed.js');
+const server = require('./server.js');
 
 async function connectToDatabase() {
   try {
-    await mongoose.connect(process.env.DB_KEY); // Establish the connection
+    await mongoose.connect(process.env.DB_KEY);
     console.log('Connected to MongoDB');
 
-    // Seed the database after successful connection
-    await seed(); // Assuming the seed function returns a promise or is an async function
+    await seed(); 
 
-    // Start the server after seeding the database
-    server.start(process.env.PORT || 3001); // Start your server
+    server.start(process.env.PORT || 3001);
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
   }

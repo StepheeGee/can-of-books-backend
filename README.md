@@ -9,27 +9,38 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 ## Collaboration
 
 ### Logistical
-What hours will you be available to communicate?
+
+1. **What hours will you be available to communicate?**
 Hours of communication will begin at 9am and close at 10pm PST.
 
-What platform will you use to communicate (ie. Slack, phone …)?
+2. **What platform will you use to communicate (ie. Slack, phone …)?**
 
 We'll communicate on Slack
 
-How often will you take breaks?
+3. **How often will you take breaks?**
 
-We'll take a ten minute break every hour. 
+We'll take a ten minute break every hour.
 
-What is your plan if you start to fall behind?
+4. **What is your plan if you start to fall behind?**
 
-If we fall behind, we will extend our hours. 
+If we fall behind, we will extend our hours.
 
 ### Cooperative
-Make a list of each person’s strengths.
 
-How can you best utilize these strengths in the development of your application?
-In what areas do you each want to develop greater strength?
-Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
+1. **Utilizing Strengths in Application Development**:
+   - **Chris's JavaScript Expertise**: Assign tasks related to front-end development, interactive features, or anything heavily reliant on JavaScript to Chris. His proficiency will ensure robust coding in these areas.
+   - **Stephanie's Learning Ability**: Utilize Stephanie's ability to learn quickly in various ways. She could assist in research, explore new libraries or frameworks, or even adapt to different coding languages as needed. Her adaptability can be valuable in troubleshooting and exploring new avenues within the project.
+
+2. **Areas of Development**:
+   - **Chris**: While proficient in JavaScript, Chris might want to deepen his knowledge in advanced JavaScript concepts, frameworks like React or Angular, or explore back-end development to become a more versatile developer.
+   - **Stephanie**: She might aim to enhance her coding skills by focusing on JavaScript, understanding its nuances, and possibly branching out into related areas such as CSS or HTML to broaden her technical expertise.
+
+3. **Approach to Day-to-Day Development**:
+   - **Collaborative Learning**: Schedule regular code review sessions where both Chris and Stephanie can discuss their work. This fosters a learning environment, ensuring both understand the codebase and learn from each other.
+   - **Pair Programming**: Encourage Chris and Stephanie to work together on certain tasks. Pair programming allows knowledge sharing, problem-solving, and mutual learning, ensuring both are involved in the code's understanding and creation.
+   - **Task Allocation**: Distribute tasks in a way that both individuals have exposure to different aspects of the application. This ensures that while Chris may lead certain sections requiring JavaScript expertise, Stephanie is involved enough to understand and learn from the process.
+
+By combining Chris's expertise and Stephanie's learning agility, the team can create a well-rounded development approach where both members contribute significantly while continually learning and improving their skill sets.
 
 ### Conflict Resolution
 

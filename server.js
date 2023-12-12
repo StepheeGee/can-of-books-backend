@@ -4,8 +4,11 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const seed = require('./seed.js');
 const Book = require('./books.js');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
 
 mongoose.connect(process.env.DB_KEY);
 
@@ -14,12 +17,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.log('Mongoose is connected');
 });
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-const PORT = process.env.PORT || 3001;
 
 app.get('/test', (request, response) => {
   response.status(200).send('Welcome to Our Server!');
@@ -84,4 +81,7 @@ app.use((error, request, response, next) => {
   response.status(500).json({ error: error.message });
 });
 
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+module.exports = app;
