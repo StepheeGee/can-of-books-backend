@@ -34,7 +34,6 @@ app.get('/books', async (request, response, next) => {
 
 app.post('/books', async (request, response, next) => {
   try {
-    // Validation logic for input
     if (!request.body.title || !request.body.description || !request.body.status) {
       return response.status(400).json({ error: 'Missing required fields' });
     }

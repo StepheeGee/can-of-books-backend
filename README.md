@@ -27,6 +27,10 @@ If we fall behind, we will extend our hours.
 
 ### Cooperative
 
+**Strengths**
+Steph - Learning
+Chris - JavaScript 
+
 1. **Utilizing Strengths in Application Development**:
    - **Chris's JavaScript Expertise**: Assign tasks related to front-end development, interactive features, or anything heavily reliant on JavaScript to Chris. His proficiency will ensure robust coding in these areas.
    - **Stephanie's Learning Ability**: Utilize Stephanie's ability to learn quickly in various ways. She could assist in research, explore new libraries or frameworks, or even adapt to different coding languages as needed. Her adaptability can be valuable in troubleshooting and exploring new avenues within the project.
