@@ -1,10 +1,29 @@
-# Start your own "Can of Books" App
-
-This repository has starter code to begin work on creating your own online bookshelf.
+# Can of Books App
 
 ## What can books do?
 
 Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+
+## Authors
+
+Stephanie G. Johnson
+Christopher Acosta
+
+## Links
+
+[Frontend Repo](https://github.com/cacosta12345/can-of-books-frontend.git) 
+
+[Backend Repo](https://github.com/StepheeGee/can-of-books-backend.git) 
+
+[Deployed Site]() 
+
+## Lighthouse
+
+[12.11.23]()
+[12.12.23]()
+[12.13.23]()
+[12.14.23]()
+
 
 ## Collaboration
 
