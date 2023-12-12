@@ -39,11 +39,17 @@ app.post('/books', async (request, response, next) => {
     }
 
     let createdBook = await Book.create(request.body);
+    if (!createdBook) {
+      return response.status(500).json({ error: 'Failed to create book' });
+    }
+    
     response.status(200).send(createdBook);
   } catch (error) {
-    next(error);
+    console.error('Error creating book:', error);
+    response.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 app.delete('/books/:bookID', async (request, response, next) => {
   try {
