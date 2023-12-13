@@ -2,9 +2,9 @@ require('dotenv').config();
 const connectToDatabase = require('./db');
 const app = require('./server'); 
 
-async function initializeApp() {
+function initializeApp() {
   try {
-    await connectToDatabase();
+    connectToDatabase();
     app.listen(process.env.PORT || 3001, () => {
       console.log(`Server listening on port ${process.env.PORT || 3001}`);
     });
