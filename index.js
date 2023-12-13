@@ -1,19 +1,16 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
-const seed = require('./seed.js');
-const server = require('./server.js');
+const connectToDatabase = require('./db');
+const app = require('./server'); 
 
-async function connectToDatabase() {
+async function initializeApp() {
   try {
-    await mongoose.connect(process.env.DB_KEY);
-    console.log('Connected to MongoDB');
-
-    await seed(); 
-
-    server.start(process.env.PORT || 3001);
+    await connectToDatabase();
+    app.listen(process.env.PORT || 3001, () => {
+      console.log(`Server listening on port ${process.env.PORT || 3001}`);
+    });
   } catch (error) {
-    console.error('Error connecting to MongoDB:', error);
+    console.error('Error initializing app:', error);
   }
 }
 
-connectToDatabase();
+initializeApp();

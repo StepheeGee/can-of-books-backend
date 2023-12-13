@@ -1,28 +1,26 @@
-'use strict';
-
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Book = require('./books.js');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.DB_KEY);
+mongoose.connect(process.env.DB_KEY)
+  .then(() => {
+    console.log('Mongoose is connected');
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-  console.log('Mongoose is connected');
-});
+const Book = require('./books.js');
 
-app.get('/', (request, response) => {
+const getHomePage = (request, response) => {
   response.status(200).send('Home Page');
-});
+};
 
-app.get('/books', async (request, response, next) => {
+const getBooks = async (request, response, next) => {
   try {
     let results = await Book.find();
     console.log(results);
@@ -30,9 +28,9 @@ app.get('/books', async (request, response, next) => {
   } catch (error) {
     next(error);
   }
-});
+};
 
-app.post('/books', async (request, response, next) => {
+const createBook = async (request, response, next) => {
   try {
     if (!request.body.title || !request.body.description || !request.body.status) {
       return response.status(400).json({ error: 'Missing required fields' });
@@ -48,10 +46,9 @@ app.post('/books', async (request, response, next) => {
     console.error('Error creating book:', error);
     response.status(500).json({ error: 'Internal server error' });
   }
-});
+};
 
-
-app.delete('/books/:bookID', async (request, response, next) => {
+const deleteBook = async (request, response, next) => {
   try {
     let id = request.params.bookID;
     console.log('Deleting', id);
@@ -60,12 +57,11 @@ app.delete('/books/:bookID', async (request, response, next) => {
   } catch (error) {
     next(error);
   }
-});
+};
 
-
-app.put('/books/:bookID', async (request, response, next) => {
+const updateBook = async (request, response, next) => {
   try {
-    let id = request.params.bookID;
+    let id = request.params.id; 
     let data = request.body;
 
     const updatedBook = await Book.findOneAndUpdate(
@@ -78,7 +74,13 @@ app.put('/books/:bookID', async (request, response, next) => {
   } catch (error) {
     next(error);
   }
-});
+};
+
+app.get('/', getHomePage);
+app.get('/books', getBooks);
+app.post('/books', createBook);
+app.delete('/books/:bookID', deleteBook);
+app.put('/book/:id', updateBook);
 
 app.get('*', (request, response) => {
   response.status(404).send('Not available');
@@ -87,8 +89,5 @@ app.get('*', (request, response) => {
 app.use((error, request, response, next) => {
   response.status(500).json({ error: error.message });
 });
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 module.exports = app;
