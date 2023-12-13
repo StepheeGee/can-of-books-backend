@@ -11,7 +11,7 @@ async function seed() {
 
   await Book.create({
     title: 'Burn the Boats',
-    description: 'Burn the Boats is the manifesto for anyone looking to level up their life while navigating risk. Each chapter includes clear, actionable advice that readers can immediately start applying to their own lives, along with inspiration drawn from dozens of real-life success stories',
+    description: 'Burn the Boats is the manifesto for anyone looking to level up their life while navigating risk.',
     status: true,
   });
 
@@ -27,7 +27,7 @@ async function seed() {
 
   await Book.create({
     title: 'The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma',
-    description: 'Trauma is a fact of life. Veterans and their families deal with the painful aftermath of combat; one in five Americans has been molested; one in four grew up with alcoholics; one in three couples have engaged in physical violence. Dr. Bessel van der Kolk, one of the world\’s foremost experts on trauma, has spent over three decades working with survivors. In The Body Keeps the Score, he uses recent scientific advances to show how trauma literally reshapes both body and brain, compromising sufferers\’ capacities for pleasure, engagement, self-control, and trust. ',
+    description: 'Dr. Bessel van der Kolk, one of the world\’s foremost experts on trauma, has spent over three decades working with survivors. In The Body Keeps the Score, he uses recent scientific advances to show how trauma literally reshapes both body and brain, compromising sufferers\’ capacities for pleasure, engagement, self-control, and trust.',
     status: false,
   });
 
