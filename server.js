@@ -80,7 +80,7 @@ app.get('/', getHomePage);
 app.get('/books', getBooks);
 app.post('/books', createBook);
 app.delete('/books/:bookID', deleteBook);
-app.put('/book/:id', updateBook);
+app.put('/books/:id', updateBook);
 
 app.get('*', (request, response) => {
   response.status(404).send('Not available');
