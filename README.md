@@ -18,7 +18,7 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 
 [Backend Repo](https://github.com/StepheeGee/can-of-books-backend.git) 
 
-[Deployed Site](https://fascinating-sunburst-0880d4.netlify.app/) 
+[Deployed Site](https://ornate-granita-5d543f.netlify.app/) 
 
 ## Lighthouse
 
@@ -26,13 +26,14 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 
 ![12.12.23](./lighthouse2.png)
 
-[12.13.23]()
+![12.13.23](./lighthouse3.png)
 
 [12.14.23]()
 
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+
+<!-- We've created a web application, affectionately coinedas The Book Nook. -->
 
 ## Collaboration
 
@@ -105,7 +106,9 @@ By combining Chris's expertise and Stephanie's learning agility, the team can cr
 
 12-11-2023 8:30pm - Application now has a fully-functional database. Frontend and Backend communicate.
 
-12-12-2023 7:30pm - Application now have working carousel and modal. App also allows for post and delete, which communicates from the frontend to the database.
+12-12-2023 7:30pm - Application now has working carousel and modal. App also allows for post and delete, which communicates from the frontend to the database.
+
+12-13-23 7:00pm - Application now has a working form that allows the user to update changes to the books displayed.
 
 ## Estimates
 
@@ -132,5 +135,17 @@ Start time: 4:30pm
 End time: 7:30pm
 
 Actual time: 3 hours
+
+**Day 3**: 12.13.23
+
+Feature: App.put and corresponding form
+
+Estimate: 4.5 hours
+
+Start time: 4:00pm
+
+End time: 8:40pm
+
+Actual time: 4.5 hours
 
 ## Credit and Collaborations
